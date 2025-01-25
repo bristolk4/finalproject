@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.prevButton {
+  padding: "10px 20px";
+  margin-right: "10px";
+  cursor: pointer
+}
+
+.nextButton {
+  padding: "10px 20px";
+  margin-right: "10px";
+  cursor: pointer
+}
+

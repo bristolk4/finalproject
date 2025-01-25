@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                           // Compile to ES6
+    "module": "commonjs",                      // Use CommonJS modules
+    "strict": true,                            // Enable strict mode
+    "esModuleInterop": true,                   // Enable ES module compatibility for `import` syntax
+    "skipLibCheck": true,                      // Skip type checking for node_modules
+    "outDir": "./dist",                        // Output directory for compiled files
+    "resolveJsonModule": true                  // Allow importing JSON files
+  },
+  "include": ["server.ts"],                    // Specify the files to include
+  "exclude": ["node_modules", "dist"]          // Exclude folders
+}
