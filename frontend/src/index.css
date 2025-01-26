@@ -1,68 +1,135 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+/* Some size relative, so it works on mobile :> */
 
 body {
+  font-family: 'Courier New', Courier, monospace;
   margin: 0;
+  padding: 0;
+  background-color: #2d5933;
+  color: #d1caca;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+
+p {
+  margin-top: 40px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+div {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+} */
+
+.flashcarddiv {
+  width: 400px;
+  height: 250px;
+  margin: 50px;
+  padding: 20px;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(133, 88, 159);
+  border-radius: 12px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.imagediv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  /* border: 2px solid black; */
+  padding: 20px;
+}
+
+img {
+  width: 500px;
+  /* HOW TO GET THIS BIGGER WHILE ALSO NOT FUCKING UP FLASHCARD DIV */
+  display: flex;
+  justify-items: center;
+}
+
+div > button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prevButton {
+  background-color: #8b8744;
+  color: white;
+}
+
+.prevButton:hover {
+  background-color: #beb850;
+}
+
+.nextButton {
+  background-color: #2f65d2;
+  color: white;
+}
+
+.nextButton:hover {
+  background-color: #6392f0;
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+}
+
+button:disabled:hover {
+  background-color: #bdc3c7;
+  cursor: default;
+}
+
+
+
+@media (max-width: 500px) {
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
   }
-  a:hover {
-    color: #747bff;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .imagediv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 70%;
+  }
+
+  .flashcarddiv {
+    width: 50%; 
+    height: auto;
+    font-size: 1.2rem; 
   }
 }

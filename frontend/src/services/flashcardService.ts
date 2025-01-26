@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/flashcards";
+const API_URL = "http://localhost:5001/api/flashcards";
 
 // Fetch all flashcards
 export const getFlashcards = async () => {
@@ -15,14 +15,14 @@ export const getFlashcard = async (id: number) => {
 };
 
 // Create a new flashcard
-export const createFlashcard = async (term: string, definition: string) => {
-  const response = await axios.post(API_URL, { term, definition });
+export const createFlashcard = async (question: string, answer: string) => {
+  const response = await axios.post(API_URL, { question, answer });
   return response.data;
 };
 
 // Update a flashcard
-export const updateFlashcard = async (id: number, term: string, definition: string) => {
-  const response = await axios.put(`${API_URL}/${id}`, { term, definition });
+export const updateFlashcard = async (id: number, question: string, answer: string) => {
+  const response = await axios.put(`${API_URL}/${id}`, { question, answer });
   return response.data;
 };
 
