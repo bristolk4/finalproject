@@ -3,8 +3,6 @@ import { Flashcard as FlashcardType } from "../flashcardsData"
 import "../index.css"
 
 // Display specific flashcard and allow it to be flipped
-// Interface specifies structure of data (properties it shoud have and types of properties)
-
 interface FlashcardProps { 
   // interface defines "blueprint" of FlashcardProps aka what properties it must have, their names and types
   card: FlashcardType
