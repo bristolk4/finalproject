@@ -6,7 +6,7 @@ import "./index.css"
 
 const App: React.FC = () => {
   // Declaring App in typescript with no props because we don't need any
-  // React.FC stands for react functional component
+  // React.FC aka react functional component is it's type
   const [currentIndex, setCurrentIndex] = useState(0)
   // Setting state of currentIndex aka current card (by the index number)
   // currentIndex = state variable that is what card is being displayed, setCurrentIndex is a function that updates this
@@ -49,13 +49,16 @@ const App: React.FC = () => {
         <img src="https://see.fontimg.com/api/rf5/y07d/ZTRhZWIzMmRlNWZhNGU2ZWJkNzdiMjEzNDM2N2ExYzAudHRm/TGVnZW5kIG9mIFplbGRhIFRyaXZpYQ/triforce.png?r=fs&h=152&w=2000&fg=805813&bg=FFFFFF&tb=1&s=76"/>
       </div>
 
-        <p>Test your knowledge of the Zelda franchise</p>
+        <p>Test your knowledge of the Zelda Games</p>
 
         <div className="flashcarddiv">
         <Flashcard 
         card={flashcards[currentIndex]}
+        // Passes card prop to Flashcard comp, accesses specific flashcard frmo the array
         resetFlip={resetFlip}
+        // Passes {resetFlip} prop to Flashcard comp. resetFlip is also the name of the state variable
         onFlipReset={handleFlipReset}
+        // Passes callback function handleFlipReset as the onFlipReset prop to Flashcard comp
         /> 
         {/* Setting display to current flashcard and flip state of card to false, aka the question */}
         </div>

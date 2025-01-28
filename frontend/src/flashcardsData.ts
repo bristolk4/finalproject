@@ -1,5 +1,6 @@
 // Setting up flashcard model and telling it how we want the data to be entered
-// Each flashcard must have an id (with type of number), question, and answer (both with type string)
+// Each flashcard has this "blueprint" and must have these properties: an id (with type of number), question, and answer (both with type string). Typescript makes you put the type
+// An interface in typescript defines the structure that objects must abide by
 
 export interface Flashcard {
   id: number
@@ -7,7 +8,7 @@ export interface Flashcard {
   answer: string
 }
 
-// Hardcoding content
+// Flashcard[] means this is going to be an array with the same "blueprint" as interface Flashcard
 export const flashcards: Flashcard[] = [
   {
     id: 1,
